@@ -1,0 +1,17 @@
+{% autoescape None %}
+<html>
+<title>{{name}}'s blogs</title>
+<body>
+{% import wtform  %}
+<form method="POST" action="/login">
+    <div>
+        {{ form.username.label }}:
+        {% form_field form.username class="css_class" %}
+    </div>
+    <div>
+        {{ form.password.label }}:
+        {{ form.password}}
+    </div>
+</form>
+</body>
+</html>
